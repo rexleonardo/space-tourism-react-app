@@ -32,7 +32,7 @@ const Navbar = () => {
                     <ul className="nav-ul-tablet">
                         <li>
                             <Link to="/">
-                                <h4 className="nav-h4-active"><span className="nav-number">00</span>Home</h4>
+                                <h4 className="nav-h4"><span className="nav-number">00</span>Home</h4>
                             </Link>
                         </li>
                         <li>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <nav id="menu" className="sidebar-container">
                 <button id="toggleClose" className="close" onClick={toggleMenu}><img src={Close} alt="Close" /></button>
                 <ul className="nav-ul">
-                    <li className="nav-li-active">
+                    <li className="nav-li">
                         <Link to="/">
                             <h4 className="nav-h4"><span className="nav-number">00</span>Home</h4>
                         </Link>
