@@ -1,38 +1,349 @@
-.App {
+/* ===== CSS Reset ===== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ===== Universal & Variables ===== */
+
+* {
+  outline: 1px solid violet;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #d0d6f9;
+  --tertiary-color: #0b0d17;
+}
+
+body {
+  background: var(--tertiary-color)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+
+/* ===== Mobile ===== */
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 16px;
+  font-family: 'Bellefair', serif;
+  font-size: 80px;
+  line-height: 100px;
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 20px 0 8px 0;
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-top: 32px;
+  font-family: 'Bellefair', serif;
+  font-size: 16px;
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 49.51%;
+}
+
+h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  color: var(--primary-color);
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h6 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin-top: 16px;
+  max-width: 327px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--secondary-color);
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+figure {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.number-header {
+  margin-right: 18px;
+  opacity: 25%;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+
+hr {
+  width: 86.67%;
+  border-color: #383b4b;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* ===== Tablet ===== */
+
+@media (min-width: 768px) {
+
+  h1 {
+    margin-top: 24px;
+    font-size: 150px;
+    line-height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    margin-top: 32px;
+    font-size: 80px;
   }
+
+  h3 {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+
+  h6 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+
+  .page-title-header {
+    align-self: flex-start;
+    margin: 40px 0 0 38.5px;
+  }
+
+  p {
+    margin-top: 24px;
+    max-width: 450px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  hr {
+    width: 573px;
+  }
+
+}
+
+/* ===== Desktop ===== */
+
+@media screen and (min-device-width: 1020px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .home-background,
+  .destination-background,
+  .crew-background,
+  .technology-background,
+  .discover-background {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  h2 {
+    margin: 37px 0 14px 0;
+    font-size: 100px;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    text-align: left;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+  }
+
+  hr {
+    max-width: 445px;
+  }
+
+  .page-title-header {
+    margin: 76px 0 0 166.5px;
+  }
+
 }
