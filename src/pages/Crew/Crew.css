@@ -1,0 +1,124 @@
+/* ===== Mobile ===== */
+
+.crew-background {
+    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.crew-h3 {
+    margin: 74px 0 0 0;
+}
+
+.crew-h5 {
+    margin-top: 8px;
+}
+
+.slick-list {
+    width: 100vw;
+}
+
+.crew-image {
+    margin: 32px auto 0 auto;
+    height: 222px;
+}
+
+.crew-p {
+    margin: 16px auto 104px auto;
+}
+
+/* ===== Tablet ===== */
+
+@media (min-width: 768px) {
+
+    .crew-background {
+        background: url("../../assets/crew/background-crew-tablet.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100vw;
+    }
+
+    .crew-panel-container {
+        display: flex;
+        flex-flow: column-reverse wrap;
+    }
+
+    .crew-hr {
+        display: none;
+    }
+
+    .crew-h3 {
+        margin: 60px 0 0 0;
+    }
+
+    .crew-h5 {
+        font-size: 40px;
+    }
+
+    .crew-p {
+        margin-top: 16px;
+    }
+
+    .crew-image {
+        margin: 90px auto 0 auto;
+        height: 515px;
+        width: auto;
+    }
+}
+
+/* ===== Desktop ===== */
+
+@media screen and (min-device-width: 1020px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .crew-background {
+        background: url("../../assets/crew/background-crew-desktop.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /* .inner-slider-div {
+      display: flex;
+      justify-content: center;
+    } */
+    .slick-list {
+        max-width: 1440px;
+    }
+
+    .crew-panel-container {
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        margin: 0 118.62px 0 165.5px;
+    }
+
+    .crew-right-panel {
+        /* margin: 0 0 0 165.5px; */
+    }
+
+    .crew-image {
+        margin: 0;
+        width: auto;
+        height: 654px;
+    }
+
+    .crew-h3,
+    .crew-h5,
+    .crew-p {
+        text-align: left;
+    }
+
+    .crew-h3 {
+        margin: 154px 0 0 0;
+        font-size: 32px;
+    }
+
+    .crew-h5 {
+        margin: 15px 0 0 0;
+        font-size: 56px;
+    }
+
+    .crew-p {
+        margin: 27px 0 0 0;
+        max-width: 444px;
+    }
+}
