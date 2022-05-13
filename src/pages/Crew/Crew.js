@@ -25,7 +25,7 @@ export default class Crew extends Component {
             <div className="crew-background">
                 <div className="container">
                     <Navbar />
-                    <main>
+                    <main data-aos="fade-up">
                         <header className="page-title-header">
                             <h4>
                                 <span className="number-header">01</span>Meet your crew
@@ -34,10 +34,10 @@ export default class Crew extends Component {
                         <Slider {...settings}>
                             <div>
                                 <div className="crew-panel-container">
-                                    <div className="crew-left-panel">
+                                    <div className="crew-left-panel" data-aos="fade-left">
                                         <img src={Commander} className='crew-image' alt='Commander' />
                                     </div>
-                                    <div className="crew-right-panel">
+                                    <div className="crew-right-panel" data-aos="fade-right">
                                         <hr className='crew-hr' />
                                         <h3 className='crew-h3'>Commander</h3>
                                         <h5 className='crew-h5'>Douglas Hurley</h5>

@@ -7,8 +7,6 @@ import Europa from '../../assets/destination/image-europa.webp'
 import Titan from '../../assets/destination/image-titan.webp'
 import '../../assets/destination/image-moon.webp'
 
-import { Link } from 'react-router-dom'
-
 export default class Destination extends Component {
 
     constructor(props) {
@@ -17,7 +15,6 @@ export default class Destination extends Component {
             clicked: false,
             title: '',
             image: '',
-            indicator: '',
             description: ``,
             averageDistance: '',
             travelTime: ''
@@ -44,7 +41,6 @@ export default class Destination extends Component {
             clicked: true,
             title: 'Mars',
             image: Mars,
-            indicator: 'destination-navbar-active',
             description: `Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!`,
             averageDistance: '225 mil. km',
             travelTime: '9 months'
@@ -78,7 +74,7 @@ export default class Destination extends Component {
             <div className="destination-background">
                 <div className="container">
                     <Navbar />
-                    <main className="destination-main">
+                    <main className="destination-main" data-aos="fade-up">
                         <header className="page-title-header">
                             <h4>
                                 <span className="number-header">01</span>Pick your destination
@@ -86,22 +82,22 @@ export default class Destination extends Component {
                         </header>
                         <div className="destination-panel-container">
                             <section className="destination-left-panel">
-                                <figure><img src={this.state.clicked ? this.state.image : Moon} alt="Moon" className="destination-image" /></figure>
+                                <figure><img src={this.state.clicked ? this.state.image : Moon} alt="Moon" className="destination-image" data-aos="fade-right" /></figure>
                             </section>
-                            <section className="destination-right-panel">
+                            <section className="destination-right-panel" data-aos="fade-left">
                                 <nav className="destination-navbar-container">
                                     <ul className="destination-navbar">
                                         <li>
-                                            <button className="destination-navbar-inactive" onClick={this.moon}><h6>Moon</h6></button>
+                                            <button className={this.state.title === '' || this.state.title === 'Moon' ? 'destination-navbar-active' : 'destination-navbar-inactive'} onClick={this.moon}><h6>Moon</h6></button>
                                         </li>
                                         <li>
-                                            <button className="destination-navbar-inactive" onClick={this.mars}><h6>Mars</h6></button>
+                                            <button className={this.state.title === 'Mars' ? 'destination-navbar-active' : 'destination-navbar-inactive'} onClick={this.mars}><h6>Mars</h6></button>
                                         </li>
                                         <li>
-                                            <button className="destination-navbar-inactive" onClick={this.europa}><h6>Europa</h6></button>
+                                            <button className={this.state.title === 'Europa' ? 'destination-navbar-active' : 'destination-navbar-inactive'} onClick={this.europa}><h6>Europa</h6></button>
                                         </li>
                                         <li>
-                                            <button className="destination-navbar-inactive" onClick={this.titan}><h6>Titan</h6></button>
+                                            <button className={this.state.title === 'Titan' ? 'destination-navbar-active' : 'destination-navbar-inactive'} onClick={this.titan}><h6>Titan</h6></button>
                                         </li>
                                     </ul>
                                 </nav>

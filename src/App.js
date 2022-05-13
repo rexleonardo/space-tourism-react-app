@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import 'aos/dist/aos.css'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
@@ -9,7 +10,12 @@ import Crew from './pages/Crew/Crew.js'
 import Technology from './pages/Technology/Technology.js'
 import Discover from './pages/Discover/Discover.js'
 
+import AOS from 'aos'
+
 function App() {
+
+  AOS.init()
+
   return (
     <Router>
       <Routes>

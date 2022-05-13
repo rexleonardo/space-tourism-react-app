@@ -1,0 +1,11 @@
+.discover-footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    font-family: 'Barlow', sans-serif;
+    text-decoration: underline;
+}
+
+.discover-footer-copyright {
+    color: var(--primary-color);
+}

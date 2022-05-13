@@ -35,12 +35,6 @@ export default class Technology extends Component {
             WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
             it's quite an awe-inspiring sight on the launch pad!`
         })
-        console.log('Vehicle')
-        console.log(this.state.clicked)
-        console.log(this.state.title)
-        console.log(this.state.imageLandscape)
-        console.log(this.state.imagePortrait)
-        console.log(this.state.description)
     }
 
     spaceport(e) {
@@ -54,12 +48,6 @@ export default class Technology extends Component {
             famous Cape Canaveral, our spaceport is ideally situated to take advantage
             of the Earth’s rotation for launch.`
         })
-        console.log('Spaceport')
-        console.log(this.state.clicked)
-        console.log(this.state.title)
-        console.log(this.state.imageLandscape)
-        console.log(this.state.imagePortrait)
-        console.log(this.state.description)
     }
 
     capsule(e) {
@@ -73,12 +61,6 @@ export default class Technology extends Component {
             you'll spend your time during the flight. It includes a space gym, cinema,
             and plenty of other activities to keep you entertained.`
         })
-        console.log('Capsule')
-        console.log(this.state.clicked)
-        console.log(this.state.title)
-        console.log(this.state.imageLandscape)
-        console.log(this.state.imagePortrait)
-        console.log(this.state.description)
     }
 
     render() {
@@ -86,7 +68,7 @@ export default class Technology extends Component {
             <div className="technology-background">
                 <div className="container">
                     <Navbar />
-                    <main>
+                    <main data-aos="fade-up">
                         <header className="page-title-header">
                             <h4><span className="number-header">03</span>Space launch 101</h4>
                         </header>
@@ -101,9 +83,9 @@ export default class Technology extends Component {
                             <section className="technology-right-panel">
                                 <nav className="technology-navbar-container">
                                     <ul className="technology-navbar">
-                                        <li><button className="technology-navbar-inactive" onClick={this.vehicle}>1</button></li>
-                                        <li><button className="technology-navbar-inactive" onClick={this.spaceport}>2</button></li>
-                                        <li><button className="technology-navbar-inactive" onClick={this.capsule}>3</button></li>
+                                        <li><button className={this.state.title === '' || this.state.title === 'Launch vehicle' ? 'technology-navbar-active' : 'technology-navbar-inactive'} onClick={this.vehicle}>1</button></li>
+                                        <li><button className={this.state.title === 'Spaceport' ? 'technology-navbar-active' : 'technology-navbar-inactive'} onClick={this.spaceport}>2</button></li>
+                                        <li><button className={this.state.title === 'Space capsule' ? 'technology-navbar-active' : 'technology-navbar-inactive'} onClick={this.capsule}>3</button></li>
                                     </ul>
                                 </nav>
                                 <section className="technology-details">

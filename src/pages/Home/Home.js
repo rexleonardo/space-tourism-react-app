@@ -8,8 +8,8 @@ const Home = () => {
         <div className="home-background">
             <div className="container">
                 <Navbar />
-                <main className="home-main">
-                    <section className="home-texts first-panel">
+                <main className="home-main" data-aos="fade-up">
+                    <section className="home-texts first-panel" data-aos="fade-right">
                         <header>
                             <h4 className="home-h4">So, you want to travel to</h4>
                             <h1>Space</h1>
@@ -18,7 +18,7 @@ const Home = () => {
                             outer space and not hover kind of on the edge of it. Well sit back, and relax
                             because we’ll give you a truly out of this world experience!</p>
                     </section>
-                    <section className="explore-container second-panel">
+                    <section className="explore-container second-panel" data-aos="fade-left">
                         <Link to="/destination" className="explore-button">Explore</Link>
                     </section>
                 </main>

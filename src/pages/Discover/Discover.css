@@ -1,0 +1,267 @@
+/* ===== Mobile ===== */
+
+.discover-background {
+    background: url("../../assets/discover/space-photo.jpeg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.discover-h5 {
+    margin: 32px 10px 0 10px;
+    text-align: center;
+}
+
+.discover-down-chevron-container {
+    width: 50vw;
+    height: 76.011994vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover-down-chevron {
+    width: 100px;
+    height: 100px;
+    filter: invert(100%);
+}
+
+.discover-form-results-container {
+    background: rgba(255, 255, 255, 0.04);
+    width: 100vw;
+    backdrop-filter: blur(81.5485px);
+    padding: 10px 0 10px 0;
+    border-radius: 15px;
+}
+
+.discover-keywords {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.discover-form {
+    margin: 50px 0 50px 0;
+    min-width: 270px;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+}
+
+.discover-form-input-label {
+    display: block;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    padding: 5px;
+}
+
+.discover-form-input-text {
+    padding: 11.5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.discover-form-select {
+    text-transform: capitalize;
+}
+
+.discover-years {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discover-min-year,
+.discover-max-year {
+    width: 49%;
+}
+
+.discover-apply-button-container {
+    display: block;
+}
+
+.discover-apply-button {
+    display: block;
+    margin: 10px 0 0 0;
+    background: #1fbba6;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+.discover-mission-total {
+    color: var(--primary-color);
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.discover-result {
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.25);
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.discover-result:last-child {
+    justify-self: self-end;
+    align-self: flex-end;
+}
+
+.discover-mission-patch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover-image {
+    width: 60px;
+    height: auto;
+}
+
+.discover-rocket-payload-status-details-links-container {
+    padding: 5px;
+}
+
+.discover-mission-status {
+    display: block;
+    width: 100px;
+    margin: 5px 0 5px 0;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+}
+
+.discover-rocket-payload {
+    display: block;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.discover-mission-status {
+    background: #ec5f7a;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+.discover-details {
+    padding: 5px 0 5px 0;
+}
+
+.discover-buttons-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.discover-button {
+    margin: 2px;
+    padding: 2px 5px 2px 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.discover-button:hover {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+    transition: 200ms;
+}
+
+.discover-button-none {
+    display: none;
+}
+
+.discover-flight-number-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.discover-flight-number,
+.discover-flight-number-label {
+    text-align: center;
+}
+
+.discover-flight-number {
+    font-size: 30px;
+}
+
+/* ===== Tablet ===== */
+
+@media (min-width: 768px) {
+
+    .discover-h5 {
+        font-size: 40px;
+    }
+
+    .discover-rocket-payload {
+        display: inline-block;
+        margin: 5px 0 5px 0;
+    }
+
+    .discover-form {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .discover-form-input-label {
+        width: 125px;
+    }
+
+    .discover-apply-button-container {
+        display: flex;
+        align-items: end;
+    }
+
+    .discover-results {
+        flex-flow: row wrap;
+    }
+
+    .discover-rocket-payload-status-details-links-container {
+        width: 100%;
+    }
+
+    .discover-keywords,
+    .discover-input-select-container {
+        flex-flow: column wrap;
+    }
+
+    .discover-form-input-select-container {
+        width: 125px;
+    }
+
+    .discover-apply-button {
+        width: 100px;
+        height: 35px;
+    }
+
+    .discover-image {
+        width: 75px;
+    }
+
+    .discover-flight-number {
+        font-size: 30px;
+    }
+
+    .discover-form-results-container {
+        width: 80vw;
+    }
+}
+
+/* ===== Desktop ===== */
+
+@media screen and (min-device-width: 1020px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    .discover-apply-button-container {
+        align-items: end;
+    }
+
+    .discover-form-results-container {
+        width: 50vw;
+    }
+}
